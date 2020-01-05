@@ -5,7 +5,7 @@ const serve = require('koa-static');
 const KoaBody = require('koa-body');
 const Pug = require('koa-pug');
 const session = require('koa-session');
-var flash = require('koa-connect-flash');
+const flash = require('koa-connect-flash');
 
 const router = require(join(__dirname, 'routes'));
 
@@ -26,16 +26,12 @@ const CONFIG = {
   renew: false,
 };
 
-
 app.use(serve(join(__dirname, 'public')));
 app.use(KoaBody());
 pug.use(app);
 app.use(session(CONFIG, app));
 app.use(flash());
 
-
-// app.use('/admin', adminRoutes.routes());
-// app.use(indexRoutes.routes());
 app.use(router());
 
 const port = process.env.PORT || 3000;

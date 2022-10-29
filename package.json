@@ -22,7 +22,7 @@
     "@koa/multer": "2.0.2",
     "@nauma/eventemitter": "1.0.7",
     "koa": "2.13.4",
-    "koa-body": "4.1.1",
+    "koa-body": "6.0.1",
     "koa-combine-routers": "4.0.2",
     "koa-connect-flash": "0.1.2",
     "koa-pug": "4.0.3",
